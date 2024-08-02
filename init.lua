@@ -281,7 +281,6 @@ require('lazy').setup({
   },
 
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
-  --
   -- This is often very useful to both group configuration, as well as handle
   -- lazy loading plugins that don't need to be loaded immediately at startup.
   --
@@ -715,6 +714,7 @@ require('lazy').setup({
     config = true,
     opts = {
       open_mapping = [[<c-\>]],
+      direction = 'float',
     },
   },
 
@@ -833,14 +833,15 @@ require('lazy').setup({
       }
     end,
   },
-
+  -- catppucin
+  { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
   { -- You can easily change to a different colorscheme.
     -- Change the name of the colorscheme plugin below, and then
     -- change the command in the config to whatever the name of that colorscheme is.
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
     'folke/tokyonight.nvim',
-    priority = 1000, -- Make sure to load this before all the other start plugins.
+    -- priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
